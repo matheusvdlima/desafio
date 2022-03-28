@@ -2,12 +2,12 @@ package fibonacci;
 
 public class Posicao {
 
-	int posicao;
-	int resultado;
-	int ultimoNumero;
-	int penultimoNumero;
+	public int posicao;
+	public int resultado;
+	public int ultimoNumero;
+	public int penultimoNumero;
 
-	Posicao(int posicao, int resultado, int ultimoNumero, int penultimoNumero) {
+	public Posicao(int posicao, int resultado, int ultimoNumero, int penultimoNumero) {
 
 		this.posicao = posicao;
 		this.resultado = resultado;
@@ -16,7 +16,7 @@ public class Posicao {
 		
 	}
 
-	void CalcularPosicao(Posicao posicao, int contador) {
+	 public void CalcularPosicao(Posicao posicao, int contador) {
 		
 		posicao.resultado = 0;
 		posicao.ultimoNumero = 0;
