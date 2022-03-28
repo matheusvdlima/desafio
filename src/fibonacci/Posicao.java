@@ -60,7 +60,7 @@ public class Posicao {
 				}
 				
 				NumberFormat valorformatado = NumberFormat.getNumberInstance(localeBR);
-				System.out.println("\nO valor da posição " + posicao + " é: " + valorformatado.format(valor));
+				System.out.println(posicao > 0 && posicao < 80 ? "\nO valor da posição " + posicao + " é: " + valorformatado.format(valor) : "");
 				
 				System.out.print(
 						"\n\n- Para tentar novamente ou saber outro valor digite 's'. Para sair, digite qualquer outro caractere. - ");
