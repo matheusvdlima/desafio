@@ -1,85 +1,49 @@
 package fibonacci;
 
-import java.text.NumberFormat;
-import java.util.InputMismatchException;
-import java.util.Scanner;
-import java.util.Locale;
-
 public class Posicao {
 
-	public static void main(String[] args) {
+	int posicao;
+	int resultado;
+	int ultimoNumero;
+	int penultimoNumero;
 
-		Locale localeBR = new Locale("pt", "BR");
+	Posicao(int posicao, int resultado, int ultimoNumero, int penultimoNumero) {
 
-		System.out.println("-".repeat(28));
-		System.out.println("   Sequência de Fibonacci   ");
-		System.out.println("-".repeat(28));
+		this.posicao = posicao;
+		this.resultado = resultado;
+		this.ultimoNumero = ultimoNumero;
+		this.penultimoNumero = penultimoNumero;
+		
+	}
 
-		Scanner entrada = new Scanner(System.in);
-		String opcao = "s";
+	void CalcularPosicao(Posicao posicao, int contador) {
+		
+		posicao.resultado = 0;
+		posicao.ultimoNumero = 0;
+		posicao.penultimoNumero = 1;
+		
+		if (posicao.posicao == 1) {
 
-		do {
+			posicao.resultado = 0;
 
-			try {
+		} else if (posicao.posicao == 2) {
 
-				System.out.println("\n\nVocê quer saber o valor de qual posição da sequência? ");
+			posicao.resultado = 1;
 
-				int posicao = entrada.nextInt();
-				entrada.nextLine();
-				int contador = 2;
-				double valor = 0;
-				double na1 = 0; // número antecessor
-				double na2 = 1; // número anteantecessor
+		} else if (posicao.posicao > 2 && posicao.posicao < 48) {
 
-				if (posicao == 1) {
+			while (contador != posicao.posicao) {
 
-					valor = 0;
+				posicao.resultado = posicao.ultimoNumero + posicao.penultimoNumero;
 
-				} else if (posicao == 2) {
+				posicao.penultimoNumero = posicao.ultimoNumero;
+				posicao.ultimoNumero = posicao.resultado;
 
-					valor = 1;
-
-				} else if (posicao > 2 && posicao < 80) {
-
-					while (contador != posicao) {
-
-						valor = na1 + na2;
-
-						na1 = na2;
-						na2 = valor;
-
-						contador++;
-
-					}
-
-				} else {
-
-					System.out.println("\n! Por favor, tente novamente digitando um número entre 1 e 79. !\n");
-					// obs: após essa posição, os valores calculados ficam imprecisos (n com 17 dígitos) - (BigDecimal)
-
-				}
-				
-				NumberFormat valorformatado = NumberFormat.getNumberInstance(localeBR);
-				System.out.println(posicao > 0 && posicao < 80 ? "\nO valor da posição " + posicao + " é: " + valorformatado.format(valor) : "");
-				
-				System.out.print(
-						"\n\n- Para tentar novamente ou saber outro valor digite 's'. Para sair, digite qualquer outro caractere. - ");
-
-				opcao = entrada.nextLine();
-
-			} catch (InputMismatchException exception) {
-
-				System.out.println("\n!!! Entrada inválida, por favor, execute o programa novamente. !!!\n");
-
-				break;
+				contador++;
 
 			}
 
-		} while (opcao.equalsIgnoreCase("s"));
-
-		System.out.println("\n\n\nPrograma finalizado.");
-
-		entrada.close();
+		}
 
 	}
 }
