@@ -1,12 +1,22 @@
 package fibonacci;
-
+/**
+ * 
+ * @author mathe
+ *
+ */
 public class Posicao {
 
 	public int posicao;
 	public int resultado;
 	public int ultimoNumero;
 	public int penultimoNumero;
-
+/**
+ * 
+ * @param posicao
+ * @param resultado
+ * @param ultimoNumero
+ * @param penultimoNumero
+ */
 	public Posicao(int posicao, int resultado, int ultimoNumero, int penultimoNumero) {
 
 		this.posicao = posicao;
