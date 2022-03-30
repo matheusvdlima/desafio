@@ -1,7 +1,8 @@
 package fibonacci;
 /**
  * 
- * @author mathe
+ * @author: Matheus Lima
+ * @date: 30 de março de 2022
  *
  */
 public class NumeroFibonacci {
@@ -25,7 +26,12 @@ public class NumeroFibonacci {
 		this.penultimoNumero = penultimoNumero;
 		
 	}
-	 
+/**
+ * 
+ * @param posicao
+ * @param valor
+ * @return
+ */
 	 public int ResultadoPosicao(NumeroFibonacci posicao, int valor) {
 		 
 		 if (valor == 1) {
