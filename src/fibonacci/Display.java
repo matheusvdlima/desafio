@@ -3,7 +3,7 @@ package fibonacci;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Resultado {
+public class Display {
 
 	public static void main(String[] args) {
 
@@ -13,22 +13,20 @@ public class Resultado {
 
 		Scanner entrada = new Scanner(System.in);
 
-		Posicao p = new Posicao(1, 0, 0, 1);
-
 		String o = "s";
 
 		while (o.equalsIgnoreCase("s")) {
 
 			try {
+				
+				NumeroFibonacci p = new NumeroFibonacci(1, 0, 0, 1);
 
 				System.out.println("\n\nVocê quer saber o valor de qual posição da sequência? ");
 
 				p.posicao = entrada.nextInt();
 				entrada.nextLine();
 
-				p.CalcularPosicao(p, 1);
-
-				System.out.println(p.posicao > 0 && p.posicao < 48 ? "\nO valor da posição " + p.posicao + " é: " + p.resultado : "\n! Por favor, tente novamente digitando um número entre 1 e 47. !");
+				System.out.println(p.posicao > 0 && p.posicao < 48 ? "\nO valor da posição " + p.posicao + " é: " + p.ResultadoPosicao(p, p.posicao) : "\n! Por favor, tente novamente digitando um número entre 1 e 47. !");
 
 				System.out.println("\n\n- Para tentar novamente ou saber outro valor digite 's'. Para sair, digite qualquer outro caractere. - ");
 
