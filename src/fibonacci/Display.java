@@ -1,5 +1,9 @@
 package fibonacci;
-
+/**
+ * 
+ * Classe responsável por iniciar o código (main) e mostrar os itens no console
+ * 
+ */
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

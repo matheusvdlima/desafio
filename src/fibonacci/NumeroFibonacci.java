@@ -1,8 +1,10 @@
 package fibonacci;
 /**
  * 
+ * Classe responsável por declarar variáveis e os métodos
  * @author: Matheus Lima
- * @date: 30 de março de 2022
+ * @version: 2.0.2
+ * @since: 30 de março de 2022
  *
  */
 public class NumeroFibonacci {
@@ -13,10 +15,13 @@ public class NumeroFibonacci {
 	public int penultimoNumero;
 /**
  * 
- * @param posicao
- * @param resultado
- * @param ultimoNumero
- * @param penultimoNumero
+ * Método construtor do objeto
+ * 
+ * @param posicao Atributo para receber a posição desejada
+ * @param resultado Atributo para receber o valor resultante da soma dos dois últimos números da sequência
+ * @param ultimoNumero Último número na sequência (inicialmente, recebe 1)
+ * @param penultimoNumero Penúltimo número na sequência (inicialmente, recebe 0)
+ * 
  */
 	public NumeroFibonacci(int posicao, int resultado, int ultimoNumero, int penultimoNumero) {
 
@@ -28,9 +33,11 @@ public class NumeroFibonacci {
 	}
 /**
  * 
- * @param posicao
- * @param valor
- * @return
+ * Método para o cálculo do valor da posição
+ * 
+ * @param posicao Usando os atributos do objeto
+ * @param valor Variável que recebe o valor de p.posicao
+ * @return Uma variável inteira com o valor referente a posição selecionada
  */
 	 public int ResultadoPosicao(NumeroFibonacci posicao, int valor) {
 		 
